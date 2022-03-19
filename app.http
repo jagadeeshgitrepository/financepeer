@@ -1,0 +1,36 @@
+
+
+POST http://localhost:3004/login/
+Content-Type: application/json
+
+{
+  "username":"jagadeesh",
+  "password":"jagadeesh@2022"
+}
+
+###
+POST http://localhost:3004/book/
+Content-Type: application/json
+
+ 
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+  }
+  
+]
+
+ 
+ 
+###
+GET http://localhost:3004/getBooks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZ2FkZWVzaCIsImlhdCI6MTY0NzcyODIyMH0.8czcOZUHSsUwXUX76Qtzr30f_gQImtdKRwjRDvQEqC4
