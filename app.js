@@ -75,7 +75,7 @@ app.post("/login/", async (request, response) => {
 });
 
 app.post("/book/", authenticateToken, async (request, response) => {
-  response.send({ hai: "hai" });
+  response.send(request.body);
 });
 
 app.get("/getBooks/", authenticateToken, async (request, response) => {
