@@ -10,9 +10,10 @@ Content-Type: application/json
 
 ###
 POST http://localhost:3004/book/
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZ2FkZWVzaCIsImlhdCI6MTY0Nzc2NDM2Mn0.2cS7pUzg2JnLx1AE8NLEI7JyO_rqvM4DS5GRBhHX7dU
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZ2FkZWVzaCIsImlhdCI6MTY0Nzc2MDkyNH0.sMDBaxAs_HgrFvyFHOrQiOkJ1YuvkKYaFa6DpBvALBo
- 
+
+
 [
   {
     "userId": 1,
@@ -32,5 +33,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZ
  
  
 ###
-GET http://localhost:3004/getBooks
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZ2FkZWVzaCIsImlhdCI6MTY0NzcyODIyMH0.8czcOZUHSsUwXUX76Qtzr30f_gQImtdKRwjRDvQEqC4
+GET http://localhost:3004/getBooks/
+Content-Type:application/json
+authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZ2FkZWVzaCIsImlhdCI6MTY0Nzc2NDM2Mn0.2cS7pUzg2JnLx1AE8NLEI7JyO_rqvM4DS5GRBhHX7dU

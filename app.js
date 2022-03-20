@@ -24,6 +24,8 @@ const initializeDBAndServer = async () => {
 initializeDBAndServer();
 const authenticateToken = (request, response, next) => {
   let jwtToken;
+  console.log("headers");
+  console.log(request.headers);
   const authHeader = request.headers["authorization"];
 
   if (authHeader !== undefined) {
@@ -70,6 +72,7 @@ app.post("/login/", async (request, response) => {
 
 app.post("/book/", authenticateToken, async (request, response) => {
   const bookDetails = request.body;
+  console.log(bookDetails);
   // let us assume we have the table named book with title, author_id, and rating as columns
   const values = bookDetails.map(
     (eachBook) =>
