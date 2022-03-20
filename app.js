@@ -6,14 +6,15 @@ const cors = require("cors");
 const sqlite3 = require("sqlite3");
 
 const app = express();
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
+
 const dbPath = path.join(__dirname, "financepeer.db");
 const jwt = require("jsonwebtoken");
 let db = null;
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Origin:*");
   next();
 });
 
