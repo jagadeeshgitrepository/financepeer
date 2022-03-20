@@ -93,7 +93,8 @@ app.post("/book/", authenticateToken, async (request, response) => {
 
   const dbResponse = await db.run(addBookQuery);
   const bookId = dbResponse.lastID;
-  response.send({ bookId: bookId });
+
+  response.send("hai");
 });
 
 app.get("/getBooks/", authenticateToken, async (request, response) => {
