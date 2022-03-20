@@ -11,6 +11,12 @@ app.use(cors());
 const dbPath = path.join(__dirname, "financepeer.db");
 const jwt = require("jsonwebtoken");
 let db = null;
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
+
 const initializeDBAndServer = async () => {
   try {
     db = await open({ filename: dbPath, driver: sqlite3.Database });
