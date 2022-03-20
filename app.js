@@ -73,7 +73,7 @@ app.post("/login/", async (request, response) => {
   }
 });
 
-app.post("/book/", authenticateToken, cors(), async (request, response) => {
+app.post("/book/", authenticateToken, async (request, response) => {
   const bookDetails = request.body;
   console.log(bookDetails);
   // let us assume we have the table named book with title, author_id, and rating as columns
@@ -95,7 +95,7 @@ app.post("/book/", authenticateToken, cors(), async (request, response) => {
   response.send({ bookId: bookId });
 });
 
-app.get("/getBooks/", cors(), authenticateToken, async (request, response) => {
+app.get("/getBooks/", authenticateToken, async (request, response) => {
   const { username } = request;
   console.log(username);
   const booksQuery = `select * from book_data`;
