@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ###
 POST http://localhost:3004/book/
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZ2FkZWVzaCIsImlhdCI6MTY0Nzc2NDM2Mn0.2cS7pUzg2JnLx1AE8NLEI7JyO_rqvM4DS5GRBhHX7dU
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZ2FkZWVzaCIsImlhdCI6MTY0Nzc2Njk1OH0.NKLfJuH538BtfxomxCcE-8KY0-3LGhWYnWK7zAz7uVc
 Content-Type: application/json
 
 
@@ -35,4 +35,4 @@ Content-Type: application/json
 ###
 GET http://localhost:3004/getBooks/
 Content-Type:application/json
-authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZ2FkZWVzaCIsImlhdCI6MTY0Nzc2NDM2Mn0.2cS7pUzg2JnLx1AE8NLEI7JyO_rqvM4DS5GRBhHX7dU
+authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphZ2FkZWVzaCIsImlhdCI6MTY0Nzc2Njk1OH0.NKLfJuH538BtfxomxCcE-8KY0-3LGhWYnWK7zAz7uVc

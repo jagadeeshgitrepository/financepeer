@@ -1,11 +1,12 @@
 const express = require("express");
+const { open } = require("sqlite");
 const path = require("path");
 const bcrypt = require("bcrypt");
-const { open } = require("sqlite");
+const cors = require("cors");
 const sqlite3 = require("sqlite3");
+
 const app = express();
 app.use(express.json());
-var cors = require("cors");
 app.use(cors());
 const dbPath = path.join(__dirname, "financepeer.db");
 const jwt = require("jsonwebtoken");
