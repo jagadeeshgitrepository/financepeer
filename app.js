@@ -75,7 +75,26 @@ app.post("/login/", async (request, response) => {
 });
 
 app.post("/book/", authenticateToken, async (request, response) => {
-  response.send({ hai: "hai" });
+  const bookDetails = request.body;
+  console.log(bookDetails);
+  // let us assume we have the table named book with title, author_id, and rating as columns
+  const values = bookDetails.map(
+    (eachBook) =>
+      `(${eachBook.userId}, ${eachBook.id}, '${eachBook.title}', '${eachBook.body}')`
+  );
+
+  const valuesString = values.join(",");
+
+  const addBookQuery = `
+    INSERT INTO
+      book_data(userId,id,title,body)
+    VALUES
+       ${valuesString};`;
+
+  const dbResponse = await db.run(addBookQuery);
+  const bookId = dbResponse.lastID;
+
+  response.send({ bookId: bookId });
 });
 
 app.get("/getBooks/", authenticateToken, async (request, response) => {
