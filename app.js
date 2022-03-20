@@ -55,6 +55,7 @@ app.post("/login/", async (request, response) => {
   console.log(request);
   const selectUserQuery = `SELECT * FROM user WHERE username = '${username}'`;
   const dbUser = await db.get(selectUserQuery);
+
   if (dbUser === undefined) {
     response.status(400);
     response.send("Invalid user");
@@ -100,6 +101,6 @@ app.get("/getBooks/", authenticateToken, async (request, response) => {
   console.log(username);
   const booksQuery = `select * from book_data`;
   const tweetsResult = await db.all(booksQuery);
-  response.send("ram krishna");
+  response.send({ tweetsResult });
 });
 module.exports = app;
