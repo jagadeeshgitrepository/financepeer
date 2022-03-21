@@ -58,7 +58,7 @@ app.post("/login/", async (request, response) => {
 
   if (dbUser === undefined) {
     response.status(400);
-    response.send("Invalid user");
+    response.send({ error_msg: "Invalid User" });
   } else {
     const isPasswordMatched = await bcrypt.compare(password, dbUser.password);
     if (isPasswordMatched === true) {
@@ -69,7 +69,7 @@ app.post("/login/", async (request, response) => {
       response.send({ jwtToken });
     } else {
       response.status(400);
-      response.send("Invalid password");
+      response.send({ error_msg: "Invalid Password" });
     }
   }
 });
